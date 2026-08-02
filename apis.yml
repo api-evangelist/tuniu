@@ -1,8 +1,25 @@
 aid: tuniu
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tuniu.png
 name: Tuniu
-description: 'Tuniu is a company surfaced as a portfolio company of dcm-ventures and added to the API
-  Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Tuniu (途牛旅游网) is a leading online leisure travel company in China, headquartered
+  in Nanjing and listed on NASDAQ under ticker TOUR. It offers packaged tours, self-guided
+  tours, and a broad range of travel-related services and products including hotels, flights,
+  train tickets, cruises, visas, and local activities. For partners, Tuniu runs an Open
+  Platform (途牛开放平台) at developer.tuniu.com that exposes supplier and retail-partner
+  integration APIs behind developer registration, letting suppliers publish inventory and
+  retail partners distribute Tuniu travel products. This profile was surfaced as a portfolio
+  company of DCM Ventures and enriched by the API Evangelist pipeline.'
 url: https://raw.githubusercontent.com/api-evangelist/tuniu/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +29,55 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
-apis: []
+- Travel
+- Tourism
+- Online Travel Agency
+- Open Platform
+- China
+- E-Commerce
+apis:
+- name: Tuniu Open Platform API
+  description: 'Tuniu Open Platform (途牛开放平台) supplier and retail-partner integration API.
+    Suppliers publish and manage travel inventory; retail partners distribute Tuniu travel
+    products. Access requires developer registration; technical documentation is published
+    behind login at developer.tuniu.com/docs.'
+  humanURL: https://developer.tuniu.com/
+  baseURL: https://api.tuniu.com/
+  tags:
+  - Travel
+  - Open Platform
+  - Partner Integration
+  properties:
+  - type: DeveloperPortal
+    url: https://developer.tuniu.com/
+  - type: Documentation
+    url: https://developer.tuniu.com/docs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
 common:
 - type: Website
-  url: http://www.tuniu.com/
+  url: https://www.tuniu.com/
+- type: DeveloperPortal
+  url: https://developer.tuniu.com/
+- type: Documentation
+  url: https://developer.tuniu.com/docs
+- type: SignUp
+  url: https://passport.tuniu.com/register?origin=https://developer.tuniu.com
+- type: About
+  url: http://www.tuniu.com/corp/company.shtml
+- type: DomainSecurity
+  url: security/tuniu-domain-security.yml
+- type: LLMsTxt
+  url: llms/tuniu-llms.txt
